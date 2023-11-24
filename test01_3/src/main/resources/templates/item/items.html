@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이템 목록</title>
+    <script th:src="@{/js/jquery-1.11.1.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/pure-min-3.0.css}">
+    <link rel="stylesheet" th:href="@{/css/grids-responsive-min-3.0.css}">
+    <link rel="stylesheet" th:href="@{/css/font-awesome-4.0.css}">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<div class="container">
+    <h2 th:text="#{page.items}"></h2>
+    <hr>
+    <div class="button-groups">
+        <button type="button" class="button" th:onclick="|location.href='@{/item/add}'|" th:text="#{button.add}"></button>
+    </div>
+    <div class="item-area">
+        <table class="table">
+            <thead>
+            <tr>
+                <th th:text="#{label.item.id}"></th>
+                <th th:text="#{label.item.itemName}"></th>
+                <th th:text="#{label.item.price}"></th>
+                <th th:text="#{label.item.quantity}"></th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr th:each="item : ${itemList}">
+                    <td th:text="${item.id}"></td>
+                    <td><a th:href="@{/item/get/${item.id}}">[[${item.itemName}]]</a>
+                        <button type="button" class="button" th:text="#{button.detail}" th:onclick="|location.href='@{/item/get/${item.id}}'|"></button>
+                    </td>
+                    <td th:text="${item.price}"></td>
+                    <td th:text="${item.quantity}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

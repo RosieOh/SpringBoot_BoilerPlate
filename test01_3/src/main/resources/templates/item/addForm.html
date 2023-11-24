@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이템 등록</title>
+    <script th:src="@{/js/jquery-1.11.1.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/pure-min-3.0.css}">
+    <link rel="stylesheet" th:href="@{/css/grids-responsive-min-3.0.css}">
+    <link rel="stylesheet" th:href="@{/css/font-awesome-4.0.css}">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<div class="container">
+    <h2 th:text="#{page.addItem}"></h2>
+    <div class="form-contain">
+        <form th:action="@{/item/add}" th:object="${item}" method="post">
+            <table>
+                <tbody>
+                <tr>
+                    <th><label for="itemName" th:text="#{label.item.itemName}"></label></th>
+                    <td>
+                        <input type="text" id="itemName" name="itemName" th:field="*{itemName}" placeholder="아이템의 이름을 입력하세요" th:placeholder="#{page.pleaseInputName}">
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="price" th:text="#{label.item.price}"></label></th>
+                    <td>
+                        <input type="text" id="price" name="price" th:field="*{price}" placeholder="아이템의 가격을 입력하세요" th:placeholder="#{page.pleaseInputPrice}">
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="quantity" th:text="#{label.item.quantity}"></label></th>
+                    <td>
+                        <input type="text" id="quantity" name="quantity" th:field="*{quantity}" placeholder="아이템의 수량을 입력하세요" th:placeholder="#{page.pleaseInputQuantity}">
+                    </td>
+                </tr>
+                <tr>
+                    <th></th><td></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="submit" class="button" th:text="#{button.add}"></button>
+                        <button type="reset" class="button" th:text="#{button.cancle}"></button>
+                        <button type="button" class="button" th:onclick="|location.href='@{/item/items}'|" th:text="#{button.list}"></button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+</body>
+</html>
