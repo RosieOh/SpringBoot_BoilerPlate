@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인 페이지</title>
+</head>
+<body>
+    <h2>메인 페이지</h2>
+    <a th:href="@{/hello}">hello</a>
+    <a th:href="@{/hello2(name='김천재', age=28)}">hello2</a>
+    <a th:href="@{/hello3(name='오천재', age=27)}">hello3</a>
+    <hr>
+    <h2>연습 페이지</h2>
+    <p><a th:href="@{/ex/sample1}">샘플1</a></p>
+    <p><a th:href="@{/ex/sample2}">샘플2</a></p>
+    <p><a th:href="@{/ex/sample3}">샘플3</a></p>
+    <p><a th:href="@{/ex/sample4}">샘플4</a></p>
+    <p><a th:href="@{/ex/sample5}">샘플5</a></p>
+</body>
+</html>
