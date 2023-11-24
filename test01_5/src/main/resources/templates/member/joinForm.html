@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <script th:src="@{/js/jquery-1.11.1.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/pure-min-3.0.css}">
+    <link rel="stylesheet" th:href="@{/css/grids-responsive-min-3.0.css}">
+    <link rel="stylesheet" th:href="@{/css/font-awesome-4.0.css}">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <style>
+        .field-error {
+            border-color: #dc3545;
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <form th:action="@{/member/joinPro}" th:object="${user}" method="post">
+        <div th:if="${#fields.hasGlobalErrors()}">
+            <p class="field-error" th:each="err : ${#fields.globalErrors()}"
+               th:text="${err}">전체 오류 메시지</p>
+        </div>
+        <div>
+            <label for="username">회원 ID</label>
+            <input type="text" id="username" th:field="*{username}" th:errorclass="field-error">
+            <div class="field-error" th:errors="*{username}"></div>
+        </div>
+        <div>
+            <label for="pwd">비밀번호</label>
+            <input type="password" id="pwd" th:field="*{password}" th:errorclass="field-error">
+            <div class="field-error" th:errors="*{password}"></div>
+        </div>
+        <div>
+            <label for="pwd">비밀번호 확인</label>
+            <input type="password" id="pwd2" th:field="*{password}" th:errorclass="field-error">
+            <div class="field-error" th:errors="*{password}"></div>
+        </div>
+        <div>
+            <label for="name">이름</label>
+            <input type="text" id="name" th:field="*{name}" th:errorclass="field-error">
+            <div class="field-error" th:errors="*{name}"></div>
+        </div>
+        <div>
+            <label for="tel">전화번호</label>
+            <input type="text" id="tel" th:field="*{tel}" th:errorclass="field-error">
+            <div class="field-error" th:errors="*{tel}"></div>
+        </div>
+        <div>
+            <label for="email">이메일</label>
+            <input type="text" id="email" th:field="*{email}" th:errorclass="field-error">
+            <div class="field-error" th:errors="*{email}"></div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <button class="button" type="submit">회원 가입</button>
+            </div>
+            <div class="col">
+                <button class="button" th:onclick="|location.href='@{/}'|" type="button">취소</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

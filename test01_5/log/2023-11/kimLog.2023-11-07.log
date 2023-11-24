@@ -1,0 +1,204 @@
+2023-11-07 16:09:01.345 INFO  [background-preinit] [o.h.validator.internal.util.Version] - HV000001: Hibernate Validator 6.2.5.Final
+2023-11-07 16:09:01.356 INFO  [restartedMain] [com.shop.ShopApplication] - Starting ShopApplication using Java 17.0.7 on FULL8-000 with PID 25328 (D:\kim\pro05\shop\build\classes\java\main started by user in D:\kim\pro05\shop)
+2023-11-07 16:09:01.357 INFO  [restartedMain] [com.shop.ShopApplication] - No active profile set, falling back to 1 default profile: "default"
+2023-11-07 16:09:01.506 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-07 16:09:01.507 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-07 16:09:01.942 WARN  [restartedMain] [o.m.spring.mapper.ClassPathMapperScanner] - No MyBatis mapper was found in '[com.shop]' package. Please check your configuration.
+2023-11-07 16:09:02.196 INFO  [restartedMain] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8085 (http)
+2023-11-07 16:09:02.202 INFO  [restartedMain] [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8085"]
+2023-11-07 16:09:02.203 INFO  [restartedMain] [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-11-07 16:09:02.203 INFO  [restartedMain] [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-07 16:09:02.242 INFO  [restartedMain] [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-11-07 16:09:02.242 INFO  [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 735 ms
+2023-11-07 16:09:02.375 INFO  [restartedMain] [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-11-07 16:09:02.569 WARN  [restartedMain] [o.s.b.a.s.s.UserDetailsServiceAutoConfiguration] - 
+
+Using generated security password: 9ec22a9e-3247-46d4-9b88-b10343d07a20
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-11-07 16:09:02.646 INFO  [restartedMain] [o.s.s.web.DefaultSecurityFilterChain] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3e35c0c0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e6f772b, org.springframework.security.web.context.SecurityContextPersistenceFilter@395b8ca0, org.springframework.security.web.header.HeaderWriterFilter@717247c6, org.springframework.security.web.csrf.CsrfFilter@21650262, org.springframework.security.web.authentication.logout.LogoutFilter@2c018900, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@26e81317, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@d5d45a1, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5194a2ed, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1dafb2a7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7733bfb2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@132c8e37, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@b5cfd1c, org.springframework.security.web.session.SessionManagementFilter@4d0faa0c, org.springframework.security.web.access.ExceptionTranslationFilter@106a3c19, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2ea71da5]
+2023-11-07 16:09:02.666 INFO  [restartedMain] [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-11-07 16:09:02.675 INFO  [restartedMain] [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8085"]
+2023-11-07 16:09:02.686 INFO  [restartedMain] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8085 (http) with context path ''
+2023-11-07 16:09:02.692 INFO  [restartedMain] [com.shop.ShopApplication] - Started ShopApplication in 1.612 seconds (JVM running for 2.093)
+2023-11-07 16:09:12.035 INFO  [http-nio-8085-exec-1] [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-07 16:09:12.035 INFO  [http-nio-8085-exec-1] [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-11-07 16:09:12.035 INFO  [http-nio-8085-exec-1] [o.s.web.servlet.DispatcherServlet] - Completed initialization in 0 ms
+2023-11-07 16:10:17.988 INFO  [background-preinit] [o.h.validator.internal.util.Version] - HV000001: Hibernate Validator 6.2.5.Final
+2023-11-07 16:10:17.988 INFO  [restartedMain] [com.shop.ShopApplication] - Starting ShopApplication using Java 17.0.7 on FULL8-000 with PID 20336 (D:\kim\pro05\shop\build\classes\java\main started by user in D:\kim\pro05\shop)
+2023-11-07 16:10:17.995 INFO  [restartedMain] [com.shop.ShopApplication] - No active profile set, falling back to 1 default profile: "default"
+2023-11-07 16:10:18.169 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-07 16:10:18.169 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-07 16:10:18.255 WARN  [restartedMain] [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.context.MissingWebServerFactoryBeanException: No qualifying bean of type 'org.springframework.boot.web.servlet.server.ServletWebServerFactory' available: Unable to start AnnotationConfigServletWebServerApplicationContext due to missing ServletWebServerFactory bean
+2023-11-07 16:10:18.282 ERROR [restartedMain] [o.s.b.d.LoggingFailureAnalysisReporter] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web application could not be started as there was no org.springframework.boot.web.servlet.server.ServletWebServerFactory bean defined in the context.
+
+Action:
+
+Check your application's dependencies for a supported servlet web server.
+Check the configured web application type.
+
+2023-11-07 16:10:43.953 INFO  [background-preinit] [o.h.validator.internal.util.Version] - HV000001: Hibernate Validator 6.2.5.Final
+2023-11-07 16:10:43.954 INFO  [restartedMain] [com.shop.ShopApplication] - Starting ShopApplication using Java 17.0.7 on FULL8-000 with PID 19420 (D:\kim\pro05\shop\build\classes\java\main started by user in D:\kim\pro05\shop)
+2023-11-07 16:10:43.955 INFO  [restartedMain] [com.shop.ShopApplication] - No active profile set, falling back to 1 default profile: "default"
+2023-11-07 16:10:44.083 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-07 16:10:44.083 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-07 16:10:44.412 WARN  [restartedMain] [o.m.spring.mapper.ClassPathMapperScanner] - No MyBatis mapper was found in '[com.shop]' package. Please check your configuration.
+2023-11-07 16:10:44.630 INFO  [restartedMain] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8085 (http)
+2023-11-07 16:10:44.635 INFO  [restartedMain] [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8085"]
+2023-11-07 16:10:44.636 INFO  [restartedMain] [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-11-07 16:10:44.636 INFO  [restartedMain] [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-07 16:10:44.671 INFO  [restartedMain] [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-11-07 16:10:44.671 INFO  [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 588 ms
+2023-11-07 16:10:44.793 INFO  [restartedMain] [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-11-07 16:10:44.961 WARN  [restartedMain] [o.s.b.a.s.s.UserDetailsServiceAutoConfiguration] - 
+
+Using generated security password: dee83cd9-5483-4aa7-97cb-f6dec95b39be
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-11-07 16:10:45.018 INFO  [restartedMain] [o.s.s.web.DefaultSecurityFilterChain] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6dbf5184, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d9c3c47, org.springframework.security.web.context.SecurityContextPersistenceFilter@71a2e11c, org.springframework.security.web.header.HeaderWriterFilter@2cbfe3b4, org.springframework.security.web.csrf.CsrfFilter@24381803, org.springframework.security.web.authentication.logout.LogoutFilter@88348d3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7a2b6a11, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@29a34e5e, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@32e66f92, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1c8d8bc7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47cd33ae, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12ff8407, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2a6f9e54, org.springframework.security.web.session.SessionManagementFilter@71e9c263, org.springframework.security.web.access.ExceptionTranslationFilter@778475c5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@76c3b0df]
+2023-11-07 16:10:45.039 INFO  [restartedMain] [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-11-07 16:10:45.048 INFO  [restartedMain] [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8085"]
+2023-11-07 16:10:45.058 INFO  [restartedMain] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8085 (http) with context path ''
+2023-11-07 16:10:45.064 INFO  [restartedMain] [com.shop.ShopApplication] - Started ShopApplication in 1.271 seconds (JVM running for 1.637)
+2023-11-07 16:10:48.630 INFO  [http-nio-8085-exec-1] [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-07 16:10:48.630 INFO  [http-nio-8085-exec-1] [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-11-07 16:10:48.630 INFO  [http-nio-8085-exec-1] [o.s.web.servlet.DispatcherServlet] - Completed initialization in 0 ms
+2023-11-07 16:17:02.966 INFO  [background-preinit] [o.h.validator.internal.util.Version] - HV000001: Hibernate Validator 6.2.5.Final
+2023-11-07 16:17:02.971 INFO  [restartedMain] [com.shop.ShopApplication] - Starting ShopApplication using Java 17.0.7 on FULL8-000 with PID 20220 (D:\kim\pro05\shop\build\classes\java\main started by user in D:\kim\pro05\shop)
+2023-11-07 16:17:02.972 INFO  [restartedMain] [com.shop.ShopApplication] - No active profile set, falling back to 1 default profile: "default"
+2023-11-07 16:17:03.125 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-07 16:17:03.125 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-07 16:17:03.474 WARN  [restartedMain] [o.m.spring.mapper.ClassPathMapperScanner] - No MyBatis mapper was found in '[com.shop]' package. Please check your configuration.
+2023-11-07 16:17:03.691 INFO  [restartedMain] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8085 (http)
+2023-11-07 16:17:03.695 INFO  [restartedMain] [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8085"]
+2023-11-07 16:17:03.696 INFO  [restartedMain] [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-11-07 16:17:03.696 INFO  [restartedMain] [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-07 16:17:03.731 INFO  [restartedMain] [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-11-07 16:17:03.731 INFO  [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 606 ms
+2023-11-07 16:17:03.794 WARN  [restartedMain] [o.s.b.a.s.s.UserDetailsServiceAutoConfiguration] - 
+
+Using generated security password: ba5be339-16ed-4e6e-85f2-2e1b6e574c0f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-11-07 16:17:03.843 INFO  [restartedMain] [o.s.s.web.DefaultSecurityFilterChain] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3192a161, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1da09765, org.springframework.security.web.context.SecurityContextPersistenceFilter@290b6591, org.springframework.security.web.header.HeaderWriterFilter@6738637, org.springframework.security.web.csrf.CsrfFilter@67109a6d, org.springframework.security.web.authentication.logout.LogoutFilter@3017b7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1d32cee0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3891910b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4c8bc37c, org.springframework.security.web.session.SessionManagementFilter@24362807, org.springframework.security.web.access.ExceptionTranslationFilter@4b563f1f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5c1e72af]
+2023-11-07 16:17:03.932 INFO  [restartedMain] [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-11-07 16:17:04.086 INFO  [restartedMain] [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-11-07 16:17:04.096 INFO  [restartedMain] [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8085"]
+2023-11-07 16:17:04.106 INFO  [restartedMain] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8085 (http) with context path ''
+2023-11-07 16:17:04.113 INFO  [restartedMain] [com.shop.ShopApplication] - Started ShopApplication in 1.338 seconds (JVM running for 1.767)
+2023-11-07 16:17:17.808 INFO  [http-nio-8085-exec-1] [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-07 16:17:17.809 INFO  [http-nio-8085-exec-1] [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-11-07 16:17:17.809 INFO  [http-nio-8085-exec-1] [o.s.web.servlet.DispatcherServlet] - Completed initialization in 0 ms
+2023-11-07 16:30:56.289 INFO  [background-preinit] [o.h.validator.internal.util.Version] - HV000001: Hibernate Validator 6.2.5.Final
+2023-11-07 16:30:56.292 INFO  [restartedMain] [com.shop.ShopApplication] - Starting ShopApplication using Java 17.0.7 on FULL8-000 with PID 26848 (D:\kim\pro05\shop\build\classes\java\main started by user in D:\kim\pro05\shop)
+2023-11-07 16:30:56.293 INFO  [restartedMain] [com.shop.ShopApplication] - No active profile set, falling back to 1 default profile: "default"
+2023-11-07 16:30:56.441 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-07 16:30:56.442 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-07 16:30:56.774 WARN  [restartedMain] [o.m.spring.mapper.ClassPathMapperScanner] - No MyBatis mapper was found in '[com.shop]' package. Please check your configuration.
+2023-11-07 16:30:56.989 INFO  [restartedMain] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8085 (http)
+2023-11-07 16:30:56.993 INFO  [restartedMain] [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8085"]
+2023-11-07 16:30:56.994 INFO  [restartedMain] [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-11-07 16:30:56.994 INFO  [restartedMain] [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-07 16:30:57.026 INFO  [restartedMain] [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-11-07 16:30:57.026 INFO  [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 584 ms
+2023-11-07 16:30:57.081 WARN  [restartedMain] [o.s.b.a.s.s.UserDetailsServiceAutoConfiguration] - 
+
+Using generated security password: 43cfae6a-9c26-4f99-8557-af307e6bfbd2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-11-07 16:30:57.130 INFO  [restartedMain] [o.s.s.web.DefaultSecurityFilterChain] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@52afd114, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7ffe6b34, org.springframework.security.web.context.SecurityContextPersistenceFilter@36852d21, org.springframework.security.web.header.HeaderWriterFilter@5e177e8f, org.springframework.security.web.csrf.CsrfFilter@3a031cfc, org.springframework.security.web.authentication.logout.LogoutFilter@3c92ff62, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@924364, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@32dd7426, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6bad4418, org.springframework.security.web.session.SessionManagementFilter@440b6f29, org.springframework.security.web.access.ExceptionTranslationFilter@7c85fea0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1ff157ca]
+2023-11-07 16:30:57.221 INFO  [restartedMain] [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-11-07 16:30:57.372 INFO  [restartedMain] [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-11-07 16:30:57.380 INFO  [restartedMain] [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8085"]
+2023-11-07 16:30:57.390 INFO  [restartedMain] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8085 (http) with context path ''
+2023-11-07 16:30:57.396 INFO  [restartedMain] [com.shop.ShopApplication] - Started ShopApplication in 1.282 seconds (JVM running for 1.649)
+2023-11-07 16:31:24.836 INFO  [http-nio-8085-exec-1] [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-07 16:31:24.836 INFO  [http-nio-8085-exec-1] [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-11-07 16:31:24.836 INFO  [http-nio-8085-exec-1] [o.s.web.servlet.DispatcherServlet] - Completed initialization in 0 ms
+2023-11-07 16:31:50.053 INFO  [restartedMain] [com.shop.ShopApplication] - Starting ShopApplication using Java 17.0.7 on FULL8-000 with PID 14148 (D:\kim\pro05\shop\build\classes\java\main started by user in D:\kim\pro05\shop)
+2023-11-07 16:31:50.051 INFO  [background-preinit] [o.h.validator.internal.util.Version] - HV000001: Hibernate Validator 6.2.5.Final
+2023-11-07 16:31:50.054 INFO  [restartedMain] [com.shop.ShopApplication] - No active profile set, falling back to 1 default profile: "default"
+2023-11-07 16:31:50.208 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-07 16:31:50.208 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-07 16:31:50.564 WARN  [restartedMain] [o.m.spring.mapper.ClassPathMapperScanner] - No MyBatis mapper was found in '[com.shop]' package. Please check your configuration.
+2023-11-07 16:31:50.773 INFO  [restartedMain] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8085 (http)
+2023-11-07 16:31:50.778 INFO  [restartedMain] [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8085"]
+2023-11-07 16:31:50.779 INFO  [restartedMain] [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-11-07 16:31:50.779 INFO  [restartedMain] [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-07 16:31:50.817 INFO  [restartedMain] [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-11-07 16:31:50.817 INFO  [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 609 ms
+2023-11-07 16:31:50.882 WARN  [restartedMain] [o.s.b.a.s.s.UserDetailsServiceAutoConfiguration] - 
+
+Using generated security password: 7fc3c5be-a0f1-49b6-ae1c-5d323e9020d0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-11-07 16:31:50.932 INFO  [restartedMain] [o.s.s.web.DefaultSecurityFilterChain] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@30ef8439, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@72947743, org.springframework.security.web.context.SecurityContextPersistenceFilter@35f9e55a, org.springframework.security.web.header.HeaderWriterFilter@5a2d0a0a, org.springframework.security.web.csrf.CsrfFilter@72f095b2, org.springframework.security.web.authentication.logout.LogoutFilter@4ee00afb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a551dc4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67854fc4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@216eb164, org.springframework.security.web.session.SessionManagementFilter@3a734869, org.springframework.security.web.access.ExceptionTranslationFilter@440b6f29, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2c552ce8]
+2023-11-07 16:31:51.021 INFO  [restartedMain] [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-11-07 16:31:51.175 INFO  [restartedMain] [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-11-07 16:31:51.184 INFO  [restartedMain] [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8085"]
+2023-11-07 16:31:51.194 INFO  [restartedMain] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8085 (http) with context path ''
+2023-11-07 16:31:51.200 INFO  [restartedMain] [com.shop.ShopApplication] - Started ShopApplication in 1.321 seconds (JVM running for 1.693)
+2023-11-07 16:31:55.995 INFO  [http-nio-8085-exec-1] [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-07 16:31:55.995 INFO  [http-nio-8085-exec-1] [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-11-07 16:31:55.995 INFO  [http-nio-8085-exec-1] [o.s.web.servlet.DispatcherServlet] - Completed initialization in 0 ms
+2023-11-07 16:52:52.765 INFO  [background-preinit] [o.h.validator.internal.util.Version] - HV000001: Hibernate Validator 6.2.5.Final
+2023-11-07 16:52:52.768 INFO  [restartedMain] [com.shop.ShopApplication] - Starting ShopApplication using Java 17.0.7 on FULL8-000 with PID 9540 (D:\kim\pro05\shop\build\classes\java\main started by user in D:\kim\pro05\shop)
+2023-11-07 16:52:52.769 INFO  [restartedMain] [com.shop.ShopApplication] - No active profile set, falling back to 1 default profile: "default"
+2023-11-07 16:52:52.900 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-07 16:52:52.900 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-07 16:52:53.239 WARN  [restartedMain] [o.m.spring.mapper.ClassPathMapperScanner] - No MyBatis mapper was found in '[com.shop]' package. Please check your configuration.
+2023-11-07 16:52:53.456 INFO  [restartedMain] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8085 (http)
+2023-11-07 16:52:53.460 INFO  [restartedMain] [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8085"]
+2023-11-07 16:52:53.461 INFO  [restartedMain] [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-11-07 16:52:53.461 INFO  [restartedMain] [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-07 16:52:53.495 INFO  [restartedMain] [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-11-07 16:52:53.496 INFO  [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 596 ms
+2023-11-07 16:52:53.553 WARN  [restartedMain] [o.s.b.a.s.s.UserDetailsServiceAutoConfiguration] - 
+
+Using generated security password: 18a62a63-c792-4ba8-b793-5788a12b855f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-11-07 16:52:53.601 INFO  [restartedMain] [o.s.s.web.DefaultSecurityFilterChain] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1de7e8ab, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4c65ea8e, org.springframework.security.web.context.SecurityContextPersistenceFilter@6abf5ab0, org.springframework.security.web.header.HeaderWriterFilter@780a078e, org.springframework.security.web.csrf.CsrfFilter@78de8bd7, org.springframework.security.web.authentication.logout.LogoutFilter@6b81010e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@321594e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@93f8569, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7eb711c8, org.springframework.security.web.session.SessionManagementFilter@42c90fb1, org.springframework.security.web.access.ExceptionTranslationFilter@57f5436a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7590cdb6]
+2023-11-07 16:52:53.693 INFO  [restartedMain] [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-11-07 16:52:53.852 INFO  [restartedMain] [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-11-07 16:52:53.862 INFO  [restartedMain] [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8085"]
+2023-11-07 16:52:53.873 INFO  [restartedMain] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8085 (http) with context path ''
+2023-11-07 16:52:53.880 INFO  [restartedMain] [com.shop.ShopApplication] - Started ShopApplication in 1.277 seconds (JVM running for 1.638)
+2023-11-07 16:54:25.084 INFO  [background-preinit] [o.h.validator.internal.util.Version] - HV000001: Hibernate Validator 6.2.5.Final
+2023-11-07 16:54:25.087 INFO  [restartedMain] [com.shop.ShopApplication] - Starting ShopApplication using Java 17.0.7 on FULL8-000 with PID 6592 (D:\kim\pro05\shop\build\classes\java\main started by user in D:\kim\pro05\shop)
+2023-11-07 16:54:25.088 INFO  [restartedMain] [com.shop.ShopApplication] - No active profile set, falling back to 1 default profile: "default"
+2023-11-07 16:54:25.222 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-07 16:54:25.222 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-07 16:54:25.566 WARN  [restartedMain] [o.m.spring.mapper.ClassPathMapperScanner] - No MyBatis mapper was found in '[com.shop]' package. Please check your configuration.
+2023-11-07 16:54:25.787 INFO  [restartedMain] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8085 (http)
+2023-11-07 16:54:25.792 INFO  [restartedMain] [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8085"]
+2023-11-07 16:54:25.793 INFO  [restartedMain] [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-11-07 16:54:25.793 INFO  [restartedMain] [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-07 16:54:25.826 INFO  [restartedMain] [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-11-07 16:54:25.826 INFO  [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 604 ms
+2023-11-07 16:54:25.883 WARN  [restartedMain] [o.s.b.a.s.s.UserDetailsServiceAutoConfiguration] - 
+
+Using generated security password: 02e23fb2-5c36-4372-b52a-9e4153cd8333
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-11-07 16:54:25.931 INFO  [restartedMain] [o.s.s.web.DefaultSecurityFilterChain] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@36760ab5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18e4391d, org.springframework.security.web.context.SecurityContextPersistenceFilter@63a08613, org.springframework.security.web.header.HeaderWriterFilter@81474ad, org.springframework.security.web.csrf.CsrfFilter@274323d, org.springframework.security.web.authentication.logout.LogoutFilter@433e33fd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ac19841, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f3ff75, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4c6e7b47, org.springframework.security.web.session.SessionManagementFilter@14c9d3d1, org.springframework.security.web.access.ExceptionTranslationFilter@3e43a631, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5617be73]
+2023-11-07 16:54:26.019 INFO  [restartedMain] [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-11-07 16:54:26.175 INFO  [restartedMain] [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-11-07 16:54:26.185 INFO  [restartedMain] [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8085"]
+2023-11-07 16:54:26.195 INFO  [restartedMain] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8085 (http) with context path ''
+2023-11-07 16:54:26.201 INFO  [restartedMain] [com.shop.ShopApplication] - Started ShopApplication in 1.278 seconds (JVM running for 1.637)

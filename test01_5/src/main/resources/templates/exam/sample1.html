@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 리스트</title>
+</head>
+<body>
+    <h2>문자열 리스트</h2>
+    <hr>
+    <div th:text="${names}"></div>
+    <hr>
+    <div>[[${names}]]</div>
+    <hr>
+    <ul th:each="str : ${names}">
+        <li th:text="${str}"></li>
+    </ul>
+    <hr>
+    <ul>
+        <li th:each="str : ${names}">[[${str}]]</li>
+    </ul>
+    <hr>
+    <ul>
+        <li th:each="str : ${names}" th:text="${str}"></li>
+    </ul>
+    <hr>
+    <ul>
+        <th:block th:each="str : ${names}">
+            <li th:text="${str}"></li>
+        </th:block>
+    </ul>
+    <hr>
+    <ul th:each="str, status : ${names}">
+        <li th:if="${status.odd }">ODD - [[${str}]]</li>
+        <li th:unless="${status.odd}">EVEN - [[${str}]]</li>
+    </ul>
+    <hr>
+    <ul th:each="str, status : ${names}">
+        <li th:if="${status.even }">EVEN - [[${str}]]</li>
+        <li th:unless="${status.even}">ODD - [[${str}]]</li>
+    </ul>
+    <hr>
+    <ul th:each="str, status : ${names}">
+        <li th:text="${status.odd} ? 'ODD - '+${str} : 'EVEN - '+${str}"></li>
+    </ul>
+    <hr>
+    <ul>
+        <li th:each="str, status : ${names}">
+            <th:block th:switch="${status.index % 3}">
+                <span th:case="0">3의 배수 번째 : [[${str}]]</span>
+                <span th:case="1">3n + 1 : [[${str}]]</span>
+                <span th:case="2">3n + 2 : [[${str}]]</span>
+            </th:block>
+        </li>
+    </ul>
+    <hr>
+    <h2>객체</h2>
+    <div>
+        <p th:text="${sample.p1}"></p>
+        <p th:text="${sample.p2}"></p>
+        <p th:text="${sample.p3}"></p>
+    </div>
+</body>
+</html>

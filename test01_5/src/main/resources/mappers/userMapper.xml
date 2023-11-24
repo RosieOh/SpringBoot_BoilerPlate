@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.mapper.UserMapper">
+    <insert id="save">
+        insert into user values (DEFAULT, #{username}, #{name}, #{password}, #{tel}, #{email}, DEFAULT)
+    </insert>
+    <select id="findAll" resultType="com.shop.entity.User">
+        select * from user
+    </select>
+    <select id="findById" resultType="com.shop.entity.User">
+        select * from user where id = #{id}
+    </select>
+    <select id="findByUserId" resultType="com.shop.entity.User">
+        select * from user where username = #{username}
+    </select>
+    <select id="findByEmail" resultType="com.shop.entity.User">
+        select * from user where email = #{email}
+    </select>
+    <select id="getLatestUser" resultType="com.shop.entity.User">
+        select * from user order by id desc limit 0,1
+    </select>
+    <update id="update">
+        update user set name=#{name}, password=#{password}, tel=#{tel} where id=#{id}
+    </update>
+    <insert id="setUserRole">
+        insert into userRole values (#{userId}, #{roleId})
+    </insert>
+    <select id="getUserRole">
+        select * from userRole where userId = #{userId}
+    </select>
+    <select id="getRole">
+        select * from role where id=#{id}
+    </select>
+</mapper>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>컬렉션</title>
+</head>
+<body>
+    <h2>리스트(List)</h2>
+    <hr>
+    <div th:text="${list}"></div>
+    <hr>
+    <div>[[${list}]]</div>
+    <div>
+        <th:block th:each="str : ${list}">
+            <span>[[${str}]]</span>
+        </th:block>
+    </div>
+    <hr>
+    <h2>맵(Map)</h2>
+    <hr>
+    <div th:text="${map}"></div>
+    <hr>
+    <div>[[${map}]]</div>
+    <hr>
+    <h2>셋(Set)</h2>
+    <hr>
+    <div th:text="${set}"></div>
+    <hr>
+    <div>[[${set}]]</div>
+    <hr>
+    <script th:inline="javascript">
+        const list = [[${list}]];
+        const map = [[${map}]];
+        const set = [[${set}]];
+        console.log(list);
+        console.log(map);
+        console.log(set);
+    </script>
+</body>
+</html>
