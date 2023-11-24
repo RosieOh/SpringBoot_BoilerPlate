@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Simple Sidebar - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            .carousel-inner > .item {
+                height: 350px;
+            }
+            .margin{
+                margin-bottom:30px;
+            }
+            .banner{
+                height: 300px;
+            }
+            .card-text{
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            a:hover{
+                text-decoration:none;
+            }
+            .center{
+                text-align:center;
+            }
+            .banner{
+                position: absolute; top:0; left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar-->
+            <div class="border-end bg-white" id="sidebar-wrapper">
+                <div class="sidebar-heading border-bottom bg-light">Start Bootstrap</div>
+                <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Dashboard</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Shortcuts</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Overview</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Events</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Profile</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Status</a>
+                </div>
+            </div>
+            <!-- Page content wrapper-->
+            <div id="page-content-wrapper">
+                <!-- Top navigation-->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <div class="container-fluid">
+                        <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                                <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#!">Link</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#!">Action</a>
+                                        <a class="dropdown-item" href="#!">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#!">Something else here</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                                <li sec:authorize="isAnonymous()"> <!-- 1. 로그인 중이 아니면-->
+                                    <a href="/members/join" class="text-decoration-none">회원가입</a> |
+                                    <a href="/member/login" class="text-decoration-none">로그인</a>
+                                </li>
+                                <li sec:authorize="isAuthenticated()"> <!-- 1. 로그인 중이면 -->
+                                    <span sec:authorize="hasRole('USER')"> <!-- 2 -->
+                                <a href="/member/mypage" class="text-decoration-none"> 마이 페이지 | </a>
+                            </span>
+                                    <span sec:authorize="hasRole('ADMIN')"> <!-- 2 -->
+                                <a href="/admin/" class="text-decoration-none"> 관리자 | </a>
+                            </span>
+                                    <a href="/member/logout" class="text-decoration-none"> 로그아웃 | </a>
+                                    <span>홍길동</span>님 <!-- 3 -->
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- Page content-->
+                <div class="container-fluid">
+                    <h1 class="mt-4">Simple Sidebar</h1>
+                    <div>
+                            <span sec:authorize="isAnonymous()"> <!-- 1. 로그인 중이 아니면-->
+                                <a href="/members/join" class="text-decoration-none">회원가입</a> |
+                                <a href="/member/login" class="text-decoration-none">로그인</a>
+                            </span>
+                            <span sec:authorize="isAuthenticated()"> <!-- 1. 로그인 중이면 -->
+                                <span sec:authorize="hasRole('USER')"> <!-- 2 -->
+                                    <a href="/member/mypage" class="text-decoration-none"> 마이 페이지 | </a>
+                                </span>
+                                <span sec:authorize="hasRole('ADMIN')"> <!-- 2 -->
+                                    <a href="/admin/" class="text-decoration-none"> 관리자 | </a>
+                                </span>
+                                <a href="/member/logout" class="text-decoration-none"> 로그아웃 | </a>
+                                <span>홍길동</span>님 <!-- 3 -->
+                            </span>
+                    </div>
+                    <div id="carouselControls" class="carousel slide margin" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active item">
+                                <img class="d-block w-100 banner" src="https://user-images.githubusercontent.com/13268420/112147492-1ab76200-8c20-11eb-8649-3d2f282c3c02.png" alt="First slide">
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="searchQuery" th:value="${itemSearchDto.searchQuery}">
+                    <div th:if="${not #strings.isEmpty(itemSearchDto.searchQuery)}" class="center">
+                        <p class="h3 font-weight-bold" th:text="${itemSearchDto.searchQuery} + '검색 결과'"></p>
+                    </div>
+
+                    <div class="row">
+                        <th:block th:each="item, status: ${items.getContent()}">
+                            <div class="col-md-4 margin">
+                                <div class="card">
+                                    <a th:href="'/item/' +${item.id}" class="text-dark">
+                                        <img th:src="${item.imgUrl}" class="card-img-top" th:alt="${item.itemNm}" height="400">
+                                        <div class="card-body">
+                                            <h4 class="card-title">[[${item.itemNm}]]</h4>
+                                            <p class="card-text">[[${item.itemDetail}]]</p>
+                                            <h3 class="card-title text-danger">[[${item.price}]]원</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </th:block>
+                    </div>
+
+                    <div th:with="start=${(items.number/maxPage)*maxPage + 1}, end=(${(items.totalPages == 0) ? 1 : (start + (maxPage - 1) < items.totalPages ? start + (maxPage - 1) : items.totalPages)})" >
+                        <ul class="pagination justify-content-center">
+
+                            <li class="page-item" th:classappend="${items.number eq 0}?'disabled':''">
+                                <a th:href="@{'/' + '?searchQuery=' + ${itemSearchDto.searchQuery} + '&page=' + ${items.number-1}}" aria-label='Previous' class="page-link">
+                                    <span aria-hidden='true'>Previous</span>
+                                </a>
+                            </li>
+
+                            <li class="page-item" th:each="page: ${#numbers.sequence(start, end)}" th:classappend="${items.number eq page-1}?'active':''">
+                                <a th:href="@{'/' +'?searchQuery=' + ${itemSearchDto.searchQuery} + '&page=' + ${page-1}}" th:inline="text" class="page-link">[[${page}]]</a>
+                            </li>
+
+                            <li class="page-item" th:classappend="${items.number+1 ge items.totalPages}?'disabled':''">
+                                <a th:href="@{'/' +'?searchQuery=' + ${itemSearchDto.searchQuery} + '&page=' + ${items.number+1}}" aria-label='Next' class="page-link">
+                                    <span aria-hidden='true'>Next</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
+                    <p>
+                        Make sure to keep all page content within the
+                        <code>#page-content-wrapper</code>
+                        . The top navbar is optional, and just for demonstration. Just create an element with the
+                        <code>#sidebarToggle</code>
+                        ID which will toggle the menu when clicked.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
