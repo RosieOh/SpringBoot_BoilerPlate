@@ -1,0 +1,194 @@
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+Support Keyword in Method Naming(메소드 이름에 지원하는 키워드) => https://docs.spring.io/spring-data/jpa/docs/1.10.1.RELEASE/reference/html/#jpa.query-methods
+
+Keyword	Sample	JPQL snippet
+And	findByLastnameAndFirstname	… where x.lastname = ?1 and x.firstname = ?2
+Or	findByLastnameOrFirstname	… where x.lastname = ?1 or x.firstname = ?2
+Is,Equals	findByFirstname,findByFirstnameIs,findByFirstnameEquals	… where x.firstname = ?1
+Between	findByStartDateBetween	… where x.startDate between ?1 and ?2
+LessThan	findByAgeLessThan	… where x.age < ?1
+LessThanEqual	findByAgeLessThanEqual	… where x.age ⇐ ?1
+GreaterThan	findByAgeGreaterThan	… where x.age > ?1
+GreaterThanEqual	findByAgeGreaterThanEqual	… where x.age >= ?1
+After	findByStartDateAfter	… where x.startDate > ?1
+Before	findByStartDateBefore	… where x.startDate < ?1
+IsNull	findByAgeIsNull	… where x.age is null
+IsNotNull,NotNull	findByAge(Is)NotNull	… where x.age not null
+Like	findByFirstnameLike	… where x.firstname like ?1
+NotLike	findByFirstnameNotLike	… where x.firstname not like ?1
+StartingWith	findByFirstnameStartingWith	… where x.firstname like ?1 (parameter bound with appended %)
+EndingWith	findByFirstnameEndingWith	… where x.firstname like ?1 (parameter bound with prepended %)
+Containing	findByFirstnameContaining	… where x.firstname like ?1 (parameter bound wrapped in %)
+OrderBy	findByAgeOrderByLastnameDesc	… where x.age = ?1 order by x.lastname desc
+Not	findByLastnameNot	… where x.lastname <> ?1
+In	findByAgeIn(Collection<Age> ages)	… where x.age in ?1
+NotIn	findByAgeNotIn(Collection<Age> age)	… where x.age not in ?1
+True	findByActiveTrue()	… where x.active = true
+False	findByActiveFalse()	… where x.active = false
+IgnoreCase	findByFirstnameIgnoreCase	… where UPPER(x.firstame) = UPPER(?1)
+
+
+1. orm.xml 의 named-query 에 의한 JPA 구현(jsp와 같은 웹 모듈의 META-INF 디렉토리 안에 작성)
+
+<named-query name="User.findByLastname">
+  <query>select u from User u where u.lastname =#{lastName}</query>
+</named-query>
+
+
+
+
+2. entity 클래스에 @NamedQuery 에 의한 JPA 구현
+
+@Entity
+@NamedQuery(name = "User.findByEmailAddress",
+  query = "select u from User u where u.emailAddress=:emailAddress")
+public class User {
+
+}
+
+
+3. JpaRepository의 메소드에 의한 구현
+
+public interface UserRepository extends JpaRepository<User, Long> {
+
+  List<User> findByLastname(String lastname);
+
+  User findByEmailAddress(String emailAddress);
+}
+
+
+
+4. JpaRepository JPQL의 @Query 어노테이션과 메소드에 의한 구현 
+
+public interface UserRepository extends JpaRepository<User, Long> {
+
+  @Query("select u from User u where u.tel=:tel")	//기본 표현식 활용
+  User findByTel(String tel);
+
+  @Query("select u from User u where u.firstname like %?1")	//like 표현식 활용
+  List<User> findByFirstnameEndsWith(String firstname);
+
+  @Query(value = "SELECT * FROM USERS WHERE EMAIL_ADDRESS = ?1", nativeQuery = true)	//nativeQuery 옵션 활용, JPA와 무관하게, 실제 DB 쿼리문을 작성할 때 사용
+  User findByEmailAddress(String emailAddress);
+
+  @Query("select u from User u where u.firstname = :firstname or u.lastname = :lastname")	//@Param 활용
+  User findByLastnameOrFirstname(@Param("lastname") String lastname,
+                                 @Param("firstname") String firstname);
+
+  @Query("select u from #{#entityName} u where u.lastname = ?1")	//SpEL 표현식 활용
+  List<User> findByLastname(String lastname);
+
+}
+
+
+5. jpaQueryFactory 를 활용한 QueryDSL을 활용한 방법
+
+@Configuration
+public class QueryDSLConfig {
+    @PersistenceContext
+    private EntityManager entityManager;
+
+    @Bean
+    public JPAQueryFactory queryFactory() {
+        return new JPAQueryFactory(entityManager);
+    }
+}
+
+@Repository
+public class QueryDSLRepository {
+
+    @Autowired
+    private JPAQueryFactory queryFactory;
+
+    public List<Board> findByTitle(String title){
+        QBoard board = new QBoard(title);
+        return queryFactory.selectFrom(board).where(board.title.eq(title)).fetch();
+    }
+
+}
+
+
+
+JPQL 기본 메소드
+
+JPARepository
+findAll():List<T>
+findAll(sort:Sort):List<T>
+findAllById(ids:iterable<ID>):List<T>
+saveAll(entities:iterable<S>):List<S>
+flush():void
+saveAndFlush(entity:S):S
+saveAllAndFlush(entities:iterable<S>):List<S>
+deleteAllInBatch():void
+deleteAllInBatch(entities:iterable<T>):void
+deleteAllByIdInBatch(ids:iterable<ID>):void
+getReferenceById(id:ID):T
+findAll(example:Example<S>):List<S>
+findAll(example:EXample<S>, sort:SORT):List<S>
+
+CrudRepository
+save(entity:S):S
+findById(id):Optional<T>
+existsById(id):boolean
+count():long
+deleteById(id):void
+delete(entity:T):void
+deleteAllById(ids:iterable<? extends ID>):void
+deleteAll(entities:Iterable<? extends T>):void
+deleteAll():void
+
+
+
+QueryDSL Method 종류
+
+
+query()		JPAQuery<?>
+delete(EntityPath<?> path)	JPADeleteClause
+from(EntityPath<?> from)	JPAQuery<?>
+from(EntityPath<?>... from)	JPAQuery<?>
+insert(EntityPath<?> path)	JPAInsertClause
+select(Expression<T> expr)	JPAQuery<T>
+select(Expression<?>... exprs)	JPAQuery<Tuple>
+selectDistinct(Expression<?> exprs)	JPAQuery<T>
+selectDistinct(Expression<?>... exprs)	JPAQuery<Tuple>
+selectFrom(EntityPath<?> from)	JPAQuery<T>
+selectOne()	JPAQuery<Integer>
+selectZero()	JPAQuery<Integer>
+update(EntityPath<?> path)	JPAInsertClause
+
+
+select()
+insert()
+update()
+delete()
+
+
+from() : 조회할 대상의 개체(테이블) 이름 지정
+where() : 조회할 대상의 조건을 지정(.eq(), .like() 등)
+and() : 조회할 대상의 모든 조건을 만족해야 하는 경우 지정(.eq(), .like() 등)
+or() : 조회할 대상의 어느 하나의 조건이라도 만족해야 하는 경우 지정(.eq(), .like() 등)
+orderBy() : 정렬 컬럼과 차순 지정(.desc(), .asc())
+offset() : 조회 대상의 row 번호
+limit() : 조회 대상의 개수 지정
+join() : 연결할 두 개체(테이블)의 컬럼을 지정
+leftjoin() : 좌측 개체(테이블) 기준의 조인
+rightjoin() : 우측 개체(테이블) 기준의 조인 
+fetchJoin() : 앞서 지정한 조인을 적용
+
+fetch() : 조회 대상들을 리스트로 반환
+fetchResults() : 조회 대상 리스트 및 개수를 포함한 결과를 반환
+fetchOne() : 조회 대상이 1개 이면 반환, 1개가 아니면 에러 발생
+fetchFirst() : 조회 대상이 1개 이상이면, 첫 번째 만 대상
+fetchCount() : 조회 대상들의 전체 개수 반환
+
+getResults() : 전체 결과 가져오기
+getTotal() : 개수 조회
+
+
+
+ 
+
+
+
