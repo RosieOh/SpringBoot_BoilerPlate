@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: org.webjars:jquery:3.1.1-1" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.webjars" artifactId="jquery" version="3.1.1-1" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.webjars/jquery/3.1.1-1/5aed832bcda6feeb7f0310ea7929d5412c3b4df5/jquery-3.1.1-1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.webjars/jquery/3.1.1-1/35d71b457c8d5237e9b616e47a91e4f0e251ed44/jquery-3.1.1-1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
