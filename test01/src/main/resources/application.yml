@@ -1,0 +1,121 @@
+1. sts 에서 진행
+https://spring.io/tools => sts 4 다운로드 => Spring Tools 4 for Eclipse의 항목 중에서 [4.20.0 - Windows x86_64] 버튼 클릭 => 다운로드된 spring-tool-suite-4-4.20.0.RELEASE-e4.29.0-win32.win32.x86_64.self-extracting.jar 의 압축을 해제 후 => 압축 해제된 spring-tool-suite-4-4.20.0.RELEASE-e4.29.0-win32.win32.x86_64.self-extracting 디렉토리 안의 contents.zip 의 압축을 해제 =>
+contents 디렉토리 안의 sts-4.20.0.RELEASE\SpringToolSuite4.exe 를 더블클릭하여 스프링 툴 슈트를 활용
+
+2. visual studio code 에서 진행
+extension[확장 관리자]에서 Spring Boot Extension Pack 를 검색하여 설치 한 후 => 왼쪽 상단 Explorer => [Create Java Project] 버튼 클릭 => 빌드 부터 지정하여 설정하고 프로젝트 생성
+
+
+프로젝트명 : test03
+
+기본 패키지 : com.chunjae.test03
+
+빌드 방식 : Gradle
+
+패키징 : war
+
+뷰 템플릿 : jsp
+
+버전 : Java 17, Spring Boot 3.0.12
+
+DB : MariaDB/edumon
+
+의존성 라이브러리
+기본 
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	Gradle: ch.qos.logback:logback-classic:1.4.11
+	Gradle: ch.qos.logback:logback-core:1.4.11
+	Gradle: com.fasterxml.jackson.core:jackson-annotations:2.14.3
+	Gradle: com.fasterxml.jackson.core:jackson-core:2.14.3
+	Gradle: com.fasterxml.jackson.core:jackson-databind:2.14.3
+	Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.14.3
+	Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.14.3
+	Gradle: com.fasterxml.jackson.module:jackson-module-parameter-names:2.14.3
+	Gradle: com.jayway.jsonpath:json-path:2.7.0
+	Gradle: com.vaadin.external.google:android-json:0.0.20131108.vaadin1
+	Gradle: io.micrometer:micrometer-commons:1.10.12
+	Gradle: io.micrometer:micrometer-observation:1.10.12
+	Gradle: jakarta.activation:jakarta.activation-api:2.1.2
+	Gradle: jakarta.annotation:jakarta.annotation-api:2.1.1
+	Gradle: jakarta.xml.bind:jakarta.xml.bind-api:4.0.1
+	Gradle: net.bytebuddy:byte-buddy-agent:1.12.23
+	Gradle: net.bytebuddy:byte-buddy:1.12.23
+	Gradle: net.minidev:accessors-smart:2.4.11
+	Gradle: net.minidev:json-smart:2.4.11
+	Gradle: org.apache.logging.log4j:log4j-api:2.19.0
+	Gradle: org.apache.logging.log4j:log4j-to-slf4j:2.19.0
+	Gradle: org.apache.tomcat.embed:tomcat-embed-core:10.1.15
+	Gradle: org.apache.tomcat.embed:tomcat-embed-el:10.1.15
+	Gradle: org.apache.tomcat.embed:tomcat-embed-websocket:10.1.15
+	Gradle: org.apiguardian:apiguardian-api:1.1.2
+	Gradle: org.assertj:assertj-core:3.23.1
+	Gradle: org.hamcrest:hamcrest:2.2
+	Gradle: org.junit.jupiter:junit-jupiter-api:5.9.3
+	Gradle: org.junit.jupiter:junit-jupiter-engine:5.9.3
+	Gradle: org.junit.jupiter:junit-jupiter-params:5.9.3
+	Gradle: org.junit.jupiter:junit-jupiter:5.9.3
+	Gradle: org.junit.platform:junit-platform-commons:1.9.3
+	Gradle: org.junit.platform:junit-platform-engine:1.9.3
+	Gradle: org.mockito:mockito-core:4.8.1
+	Gradle: org.mockito:mockito-junit-jupiter:4.8.1
+	Gradle: org.objenesis:objenesis:3.2
+	Gradle: org.opentest4j:opentest4j:1.2.0
+	Gradle: org.ow2.asm:asm:9.3
+	Gradle: org.skyscreamer:jsonassert:1.5.1
+	Gradle: org.slf4j:jul-to-slf4j:2.0.9
+	Gradle: org.slf4j:slf4j-api:2.0.9
+	Gradle: org.springframework.boot:spring-boot-autoconfigure:3.0.12
+	Gradle: org.springframework.boot:spring-boot-starter-json:3.0.12
+	Gradle: org.springframework.boot:spring-boot-starter-logging:3.0.12
+	Gradle: org.springframework.boot:spring-boot-starter-test:3.0.12
+	Gradle: org.springframework.boot:spring-boot-starter-tomcat:3.0.12
+	Gradle: org.springframework.boot:spring-boot-starter-web:3.0.12
+	Gradle: org.springframework.boot:spring-boot-starter:3.0.12
+	Gradle: org.springframework.boot:spring-boot-test-autoconfigure:3.0.12
+	Gradle: org.springframework.boot:spring-boot-test:3.0.12
+	Gradle: org.springframework.boot:spring-boot:3.0.12
+	Gradle: org.springframework:spring-aop:6.0.13
+	Gradle: org.springframework:spring-beans:6.0.13
+	Gradle: org.springframework:spring-context:6.0.13
+	Gradle: org.springframework:spring-core:6.0.13
+	Gradle: org.springframework:spring-expression:6.0.13
+	Gradle: org.springframework:spring-jcl:6.0.13
+	Gradle: org.springframework:spring-test:6.0.13
+	Gradle: org.springframework:spring-web:6.0.13
+	Gradle: org.springframework:spring-webmvc:6.0.13
+	Gradle: org.xmlunit:xmlunit-core:2.9.1
+	Gradle: org.yaml:snakeyaml:1.33
+Spring Web
+Spring boot Devoloper
+MariaDB
+MyBatis
+Lombok
+Spring Security
+
+package 구성
+	common : CommonTopComponent
+	config : ApplicationConfig, AdminAuthenticationProvider
+	entity : UserInfo, UserAuthority
+	persitence : UserMapper => userMapper.xml
+	service : UserService
+	controller : UserController
+
+사용자 도메인 : UserInfo 
+	no  id  pw  name  email  tel  regdate  point  act lev
+
+기능 구현
+	- 사용자 정보 조회
+	- 사용자 권한 조회
+	- 사용자 등록/회원 가입
+	- 사용자 권한 등록
+	- 사용자 중복체크
+	- 로그인
+	- 로그아웃
+	- 사용자 정보 수정
+	- 사용자 계정 비활성화
+
+
+

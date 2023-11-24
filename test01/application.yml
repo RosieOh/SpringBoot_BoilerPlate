@@ -1,0 +1,15 @@
+server:
+  port: 8085
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/view
+      suffix: .jsp
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/edumon
+    username: root
+    password: 1234
+mybatis:
+  type-aliases-package: com.chunjae
+  mapper-locations: mappers/**/*.xml
