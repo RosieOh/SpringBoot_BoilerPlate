@@ -1,0 +1,35 @@
+{{!
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Faux</title>
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width" />
+<base href="/" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+</head>
+<body>}}
+{{#layout}}{{#menu}}home{{/menu}}
+	<h1>Demo</h1>
+	<div class="container">
+		<div class="col-sm-offset-2 col-sm-10">Hello World</div>
+		{{#form.foo}}<form method="post">
+			<div class="form-group has-feedback">
+				{{#inputField}}Value <input name="value"/>{{/inputField}}
+				<input type="hidden" name="_csrf" value="{{_csrf.token}}" />
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button class="btn btn-primary" type="submit">Submit</button>
+				</div>
+			</div>
+		</form>{{/form.foo}}
+	</div>
+	{{#value}}<div class="container">
+		<div class="col-sm-offset-2 col-sm-10">Value is: {{.}}</div>
+	</div>{{/value}}
+{{/layout}}
+{{!</body></html>}}
