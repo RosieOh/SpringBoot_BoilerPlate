@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout1.html}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using to Thymeleaf Layout</title>
+</head>
+<body>
+<header layout:fragment="header">
+    헤더
+</header>
+<div layout:fragment="contents">
+    콘텐츠
+    <ul>
+        <li th:each="str : ${cate}" th:text="${str}"></li>
+    </ul>
+</div>
+<footer layout:fragment="footer">
+    푸터
+</footer>
+<script layout:fragment="script" th:inline="javascript">
+    const strArr = [[${cate}]];
+    console.log(strArr);
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이템 상세 보기</title>
+    <script th:src="@{/js/jquery-1.11.1.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/pure-min-3.0.css}">
+    <link rel="stylesheet" th:href="@{/css/grids-responsive-min-3.0.css}">
+    <link rel="stylesheet" th:href="@{/css/font-awesome-4.0.css}">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<div class="container">
+    <h2 th:text="#{page.item}"></h2>
+    <article>
+        <table class="table">
+            <tbody>
+            <tr>
+                <th><label for="id" th:text="#{label.item.id}"></label></th>
+                <td><input type="text" id="id" name="id" th:value="${item.id}" readonly></td>
+            </tr>
+            <tr>
+                <th><label for="itemName" th:text="#{label.item.itemName}"></label></th>
+                <td><input type="text" id="itemName" name="itemName" th:value="${item.itemName}" readonly></td>
+            </tr>
+            <tr>
+                <th><label for="price" th:text="#{label.item.price}"></label></th>
+                <td><input type="text" id="price" name="price" th:value="${item.price}" readonly></td>
+            </tr>
+            <tr>
+                <th><label for="itemName" th:text="#{label.item.quantity}"></label></th>
+                <td><input type="text" id="quantity" name="quantity" th:value="${item.quantity}" readonly></td>
+            </tr>
+            <tr>
+                <th></th><td></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <a class="button" th:href="@{|/item/edit/${item.id}|}" th:text="#{button.update}"></a>
+                    <button type="button" class="button" th:onclick="|location.href='@{/item/items}'|" th:text="#{button.list}"></button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </article>
+</div>
+</body>
+</html>
