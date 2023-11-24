@@ -1,0 +1,48 @@
+2023-11-01 10:12:29.605 INFO  [restartedMain] [com.chunjae.test04.Test04Application] - Starting Test04Application using Java 17.0.7 with PID 2476 (D:\kim\springBootStudy\test04\build\classes\java\main started by user in D:\kim\springBootStudy\test04)
+2023-11-01 10:12:29.608 INFO  [restartedMain] [com.chunjae.test04.Test04Application] - No active profile set, falling back to 1 default profile: "default"
+2023-11-01 10:12:29.661 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-01 10:12:29.662 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-01 10:12:30.329 INFO  [restartedMain] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8085 (http)
+2023-11-01 10:12:30.333 INFO  [restartedMain] [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8085"]
+2023-11-01 10:12:30.334 INFO  [restartedMain] [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-11-01 10:12:30.334 INFO  [restartedMain] [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-01 10:12:30.412 INFO  [restartedMain] [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-11-01 10:12:30.415 INFO  [restartedMain] [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-11-01 10:12:30.415 INFO  [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 752 ms
+2023-11-01 10:12:30.624 INFO  [restartedMain] [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-11-01 10:12:30.702 INFO  [restartedMain] [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-11-01 10:12:30.712 INFO  [restartedMain] [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8085"]
+2023-11-01 10:12:30.728 INFO  [restartedMain] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8085 (http) with context path ''
+2023-11-01 10:12:30.734 INFO  [restartedMain] [com.chunjae.test04.Test04Application] - Started Test04Application in 1.352 seconds (process running for 1.766)
+2023-11-01 10:13:04.880 INFO  [http-nio-8085-exec-1] [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-01 10:13:04.880 INFO  [http-nio-8085-exec-1] [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-11-01 10:13:04.881 INFO  [http-nio-8085-exec-1] [o.s.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2023-11-01 10:13:24.192 INFO  [http-nio-8085-exec-8] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+2023-11-01 10:13:24.252 INFO  [http-nio-8085-exec-8] [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@17ba1883
+2023-11-01 10:13:24.253 INFO  [http-nio-8085-exec-8] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+2023-11-01 10:23:37.193 INFO  [SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+2023-11-01 10:23:37.196 INFO  [SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
+2023-11-01 10:23:42.909 INFO  [restartedMain] [com.chunjae.test04.Test04Application] - Starting Test04Application using Java 17.0.7 with PID 18548 (D:\kim\springBootStudy\test04\build\classes\java\main started by user in D:\kim\springBootStudy\test04)
+2023-11-01 10:23:42.910 INFO  [restartedMain] [com.chunjae.test04.Test04Application] - No active profile set, falling back to 1 default profile: "default"
+2023-11-01 10:23:42.933 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-01 10:23:42.933 INFO  [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-01 10:23:43.502 INFO  [restartedMain] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8085 (http)
+2023-11-01 10:23:43.507 INFO  [restartedMain] [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8085"]
+2023-11-01 10:23:43.507 INFO  [restartedMain] [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-11-01 10:23:43.508 INFO  [restartedMain] [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-01 10:23:43.597 INFO  [restartedMain] [org.apache.jasper.servlet.TldScanner] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-11-01 10:23:43.600 INFO  [restartedMain] [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-11-01 10:23:43.601 INFO  [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 666 ms
+2023-11-01 10:23:43.812 INFO  [restartedMain] [o.s.b.a.w.s.WelcomePageHandlerMapping] - Adding welcome page template: index
+2023-11-01 10:23:43.901 INFO  [restartedMain] [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-11-01 10:23:43.908 INFO  [restartedMain] [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8085"]
+2023-11-01 10:23:43.920 INFO  [restartedMain] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8085 (http) with context path ''
+2023-11-01 10:23:43.926 INFO  [restartedMain] [com.chunjae.test04.Test04Application] - Started Test04Application in 1.181 seconds (process running for 1.571)
+2023-11-01 10:23:55.828 INFO  [http-nio-8085-exec-1] [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-01 10:23:55.829 INFO  [http-nio-8085-exec-1] [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-11-01 10:23:55.829 INFO  [http-nio-8085-exec-1] [o.s.web.servlet.DispatcherServlet] - Completed initialization in 0 ms
+2023-11-01 10:24:35.906 INFO  [http-nio-8085-exec-1] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+2023-11-01 10:24:35.960 INFO  [http-nio-8085-exec-1] [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@6b4f32e3
+2023-11-01 10:24:35.961 INFO  [http-nio-8085-exec-1] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+2023-11-01 10:29:21.419 INFO  [SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+2023-11-01 10:29:21.421 INFO  [SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
