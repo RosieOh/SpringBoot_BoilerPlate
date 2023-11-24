@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 폼</title>
+</head>
+<body>
+    <div class="container">
+        <h2>회원 가입</h2>
+        <form th:action="@{/registration}" action="#" autocomplete="off" th:object="${user}" method="post">
+            <div>
+                <label th:if="${#fields.hasErrors('loginId')}" th:errors="*{loginId}"></label>
+                <input type="text" th:field="*{loginId}" placeholder="LogInId" required>
+            </div>
+            <div>
+                <label th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}"></label>
+                <input type="text" th:field="*{userName}" placeholder="userName" required>
+            </div>
+            <div>
+                <label th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></label>
+                <input type="password" th:field="*{password}" placeholder="password" required>
+            </div>
+            <div>
+                <label th:if="${#fields.hasErrors('passwordConfirm')}" th:errors="*{passwordConfirm}"></label>
+                <input type="password" th:field="*{passwordConfirm}" placeholder="passwordConfirm" required>
+            </div>
+            <div>
+                <button type="submit">회원가입</button>
+            </div>
+            <span th:utext="${successMessage}"></span>
+        </form>
+    </div>
+</body>
+</html>
