@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.mapper.BookMapper">
+    <insert id="createBook">
+        insert into book values (default, #{title}, #{creator}, #{publisher}, #{pubDate})
+    </insert>
+    <select id="readBookAll" resultType="com.shop.entity.Book">
+        select * from book
+    </select>
+    <select id="readBook" resultType="com.shop.entity.Book">
+        select * from book where seq = #{seq}
+    </select>
+</mapper>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using to Thymeleaf Layout2</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
+</head>
+<body>
+<header class="header" id="hd">
+<!--    <div th:insert="~{layout/header :: header}" id="header"></div>-->
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        <div th:insert="~{layout/header :: logo}" id="logo"></div>
+        <div th:insert="~{layout/header :: gnb}" id="gnb"></div>
+    </div>
+</header>
+<div class="contents" style="clear:both;width:100%;padding-top:100px;">
+    <hr>
+    <h2>샘플 페이지2</h2>
+    <hr>
+</div>
+<footer class="footer" id="ft" style="clear:both;width:100%;padding-top:20px;">
+    <div class="content-wrapper">
+        <div th:insert="~{layout/footer :: fnb}"></div>
+        <div th:insert="~{layout/footer :: copy}"></div>
+    </div>
+</footer>
+</body>
+</html>
